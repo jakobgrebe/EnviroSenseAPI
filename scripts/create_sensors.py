@@ -2,7 +2,7 @@ import requests
 import random
 
 BASE_URL = 'http://127.0.0.1:5000'
-NUM_SENSORS = 35  
+NUM_SENSORS = 10 
 
 def generate_sequential_sensor(sensor_id):
     sensor_name = f"Sensor-{sensor_id}"
@@ -24,7 +24,7 @@ def create_sensor(sensor_data):
         print(f"Error creating sensor: {e}")
 
 def create_sequential_sensors():
-    for sensor_id in range(1, NUM_SENSORS + 1):  # Loop from 1 to 35
+    for sensor_id in range(1, NUM_SENSORS + 1): 
         sensor_data = generate_sequential_sensor(sensor_id)
         create_sensor(sensor_data)
 
