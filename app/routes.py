@@ -44,14 +44,13 @@ def update_sensor(sensor_id):
 def delete_sensor(sensor_id):
     sensor = Sensor.query.get_or_404(sensor_id)
 
-    sensor_data_exists = SensorData.query.filter_by(sensor_id=sensor.id).first()
-    if sensor_data_exists:
-        return jsonify({"error": "Cannot delete sensor while related sensor data exists"}), 400
+    SensorData.query.filter_by(sensor_id=sensor.id).delete()
 
     db.session.delete(sensor)
     db.session.commit()
-    
-    return '', 204
+
+    return jsonify({"message": "Sensor and associated data deleted successfully"}), 204
+
 
 @app.route('/sensors/<int:sensor_id>/data', methods=['POST'])
 def add_sensor_data(sensor_id):
