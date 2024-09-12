@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 ### Step 4: Set Up PostgreSQL Database
 1. Use `pgAdmin` to create a new PostgreSQL database (e.g., `envirodb`).
-2. The `Sensor` and `SensorData` tables are created using SQLAlchemy when the appropriate Flask route is triggered.
+2. The `Sensor` and `SensorData` tables are created when running Flask.
 
 3. Run the Flask API:
 
