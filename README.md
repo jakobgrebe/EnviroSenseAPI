@@ -67,15 +67,7 @@ pip install -r requirements.txt
 flask run
 ```
 
-4. Access the `/create-tables` route to create the tables:
-
-   ```bash
-   curl http://127.0.0.1:5000/create-tables
-   ```
-
-   If the URL or port differs on your setup, update the address accordingly. This may also require changes in any relevant code files and scripts.
-
-5. Use `pgAdmin` or SQL queries to manage and view the tables.
+4. Use `pgAdmin` or SQL queries to manage and view the tables.
 
 ### Step 5: Configure Environment Variables
 Configure your PostgreSQL credentials in a `.env` file in the project root:
