@@ -86,7 +86,7 @@ flask run
 The API will be running locally on `http://127.0.0.1:5000` (update the URL if your setup differs).
 
 ### Step 7: Create and Simulate Sensor Data
-In order to run these Python scripts you will need to open a new terminal as the Flask API will be running in the current terminal. Data first needs to be created in order for data to be added. 10 data sensors will be created once running this Python script:
+In order to run these Python scripts you will need to open a new terminal as the Flask API will be running in the current terminal. Sensors first need to be created in order for data to be added. 10 data sensors will be created once running this Python script:
 
 ```bash
 python create_sensors.py
